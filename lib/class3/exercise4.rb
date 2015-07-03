@@ -8,3 +8,8 @@
 # divisible by 400 (e.g. 2000).
 #
 # TIP: I expect you to use a loop and a few modulo operations.
+for i in 1900..2000
+  next if i % 4 != 0
+  next if i % 100 == 0 && i % 400 != 0
+  puts i
+end
