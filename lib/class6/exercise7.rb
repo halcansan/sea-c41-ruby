@@ -23,15 +23,18 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.absolute_path('lib/class6/database.yml')
 end
 
 def load
-  { replace: 'me' }
+  { name: 'George Harrison',
+    age: 58,
+    song: 'Something',
+    url: 'https://www.youtube.com/watch?v=UKAp-jRUp2o' }
 end
 
 def remove(key)
-  key # fix me
+  load.delete(key.to_sym)
 end
 
 input = ARGV[0]

@@ -32,15 +32,20 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.absolute_path('lib/class6/database.yml')
 end
 
 def load
-  { fix: 'me' }
+  { name: 'George Harrison',
+    age: 58,
+    song: 'Something',
+    url: 'https://www.youtube.com/watch?v=UKAp-jRUp2o' }
 end
 
 def display(pairs)
-  pairs # fix me
+  pairs.each do | key, value |
+    puts key.inspect + ' => ' + value.inspect
+  end
 end
 
 person = load

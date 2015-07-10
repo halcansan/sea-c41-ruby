@@ -22,15 +22,18 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.absolute_path('lib/class6/database.yml')
 end
 
 def load
-  { replace: 'me' }
+  { name: 'George Harrison',
+    age: 58,
+    song: 'Something',
+    url: 'https://www.youtube.com/watch?v=UKAp-jRUp2o' }
 end
 
 def update(key, value)
-  key + value # fix me
+  load[key] = value
 end
 
 input1, input2 = ARGV
