@@ -22,6 +22,15 @@
 
 class Array
   def each_without_yolo(&block)
-    block # fix me
+    each do |e|
+      if e == 'YOLO'
+        puts 'Life is too short'
+      elsif e == 'yolo'
+        puts 'Life is too short'
+      else
+        puts e
+      end
+    end
+    block.call
   end
 end
