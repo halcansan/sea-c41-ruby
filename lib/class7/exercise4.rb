@@ -27,5 +27,29 @@
 
 # rubocop:disable TrivialAccessors
 class OrangeTree
-  # replace me
+
+  def initialize(fruit = 50)
+    @fruit = fruit
+  end
+
+  def fruit
+    @fruit
+  end
+
+  def pick!(amount = 1)
+    if amount <= 50
+      @fruit = @fruit - amount
+    else
+      nil
+    end
+  end
+
+  def ==(other)
+    if self.fruit == other.fruit
+      return true
+    else
+      return false
+    end
+  end
+
 end
